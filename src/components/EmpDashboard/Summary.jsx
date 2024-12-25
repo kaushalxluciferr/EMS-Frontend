@@ -1,7 +1,6 @@
 import React from 'react'
 import { FaUser } from 'react-icons/fa'
 import { useAuth } from '../../context/AuthContext'
-import User from '../../../../server/models/user'
 
 function Summary() {
 const {user}=useAuth()
