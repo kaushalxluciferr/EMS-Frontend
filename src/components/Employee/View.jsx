@@ -11,7 +11,7 @@ function View() {
         const GetEmployee = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:4000/api/employee/${_id}`,
+                    `https://employee-api-mu.vercel.app/api/employee/${_id}`,
                     {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -42,7 +42,7 @@ function View() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <img
-                        src={`http://localhost:4000/${employee?.userId?.profileImage}`}
+                        src={`https://employee-api-mu.vercel.app/${employee?.userId?.profileImage}`}
                         alt=""
                         className="rounded-full border w-68"
                     />

@@ -15,7 +15,7 @@ function AuthContext({ children }) {
         const token = localStorage.getItem('token');
         
         if (token) {
-          const response = await fetch('http://localhost:4000/api/auth/verify', {
+          const response = await fetch('https://employee-api-mu.vercel.app/api/auth/verify', {
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${token}`,

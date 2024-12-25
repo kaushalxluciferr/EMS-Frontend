@@ -12,7 +12,7 @@ useEffect(()=>{
   const fetchEmployees=async ()=>{
     setempload(true)
     try{
-  const response=await axios.get('http://localhost:4000/api/employee',{
+  const response=await axios.get('https://employee-api-mu.vercel.app/api/employee',{
     headers:{
       "Authorization":`Bearer ${localStorage.getItem('token')}`
     }
@@ -26,7 +26,7 @@ useEffect(()=>{
       dep_name: emp.department.dep_name, // Department name
       name: emp.userId.name, // Employee's name
       dob: new Date(emp.dob).toLocaleDateString(), // Format date
-      profileImage:<img width={"40px"} height={"40px"} style={{borderRadius: "50%"}} src={ `http://localhost:4000/${emp.userId.profileImage}`}/>, // Profile image URL
+      profileImage:<img width={"40px"} height={"40px"} style={{borderRadius: "50%"}} src={ `https://employee-api-mu.vercel.app/${emp.userId.profileImage}`}/>, // Profile image URL
       action: <EmployeeButtons  _id={emp._id} />, // Action buttons
     }));
     setemployees(data); // Update state

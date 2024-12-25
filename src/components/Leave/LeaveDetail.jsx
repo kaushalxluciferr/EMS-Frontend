@@ -11,7 +11,7 @@ const navigate=useNavigate()
         const getLeave = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:4000/api/leave/detail/${_id}`,
+                    `https://employee-api-mu.vercel.app/api/leave/detail/${_id}`,
                     {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -33,7 +33,7 @@ const navigate=useNavigate()
     }, [_id]);
 const changestatus=async (_id,status)=>{
  try{
-const response=await axios.put(`http://localhost:4000/api/leave/${_id}`,{status},{
+const response=await axios.put(`https://employee-api-mu.vercel.app/api/leave/${_id}`,{status},{
     headers:{
         "Authorization":`Bearer ${localStorage.getItem("token")}`,
     }
@@ -55,7 +55,7 @@ navigate("/admin-dashboard/leaves")
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="">
                 <img
-                    src={`http://localhost:4000/${leave?.employeeId?.userId?.profileImage}`}
+                    src={`https://employee-api-mu.vercel.app/${leave?.employeeId?.userId?.profileImage}`}
                     alt=""
                     className="rounded-full border w-68"
                 />

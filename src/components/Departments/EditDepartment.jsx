@@ -18,7 +18,7 @@ const handlechange=(e)=>{
         const fetchDepartment=async ()=>{
           setdeploading(true)
           try{
-        const response=await axios.get(`http://localhost:4000/api/department/${id}`,{
+        const response=await axios.get(`https://employee-api-mu.vercel.app/api/department/${id}`,{
           headers:{
             "Authorization":`Bearer ${localStorage.getItem('token')}`
           }
@@ -43,7 +43,7 @@ const handlechange=(e)=>{
         const handlesubmit=async (e)=>{
             e.preventDefault()
             try{
-            const response=await axios.put(`http://localhost:4000/api/department/${id}`,department,{
+            const response=await axios.put(`https://employee-api-mu.vercel.app/api/department/${id}`,department,{
                headers:{ "Authorization":`Bearer ${localStorage.getItem('token')}`,
             },
             })

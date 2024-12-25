@@ -9,7 +9,7 @@ const[summ,setsumm]=useState(null)
 useEffect(()=>{
 const fetchSumm=async()=>{
   try{
-const response=await axios.get('http://localhost:4000/api/dashboard/summary',{
+const response=await axios.get('https://employee-api-mu.vercel.app/api/dashboard/summary',{
   headers:{
     "Authorization":`Bearer ${localStorage.getItem('token')}`
   }

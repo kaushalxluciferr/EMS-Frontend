@@ -33,7 +33,7 @@ Object.keys(formdata).forEach((key)=>{
     formDataObj.append(key,formdata[key]) 
 })
 try{
-const response=await axios.post('http://localhost:4000/api/employee/add',formDataObj,{
+const response=await axios.post('https://employee-api-mu.vercel.app/api/employee/add',formDataObj,{
     headers:{
         "Authorization":`Bearer ${localStorage.getItem('token')}`
     }

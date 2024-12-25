@@ -19,7 +19,7 @@ setdepartment({...department,[name]:value})
 const handlesubmit=async (e)=>{
 e.preventDefault()
 try{
-const response=await axios.post('http://localhost:4000/api/department/add',department,{
+const response=await axios.post('https://employee-api-mu.vercel.app/api/department/add',department,{
    headers:{ "Authorization":`Bearer ${localStorage.getItem('token')} `
 }
 })

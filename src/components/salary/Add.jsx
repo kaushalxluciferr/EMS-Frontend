@@ -46,7 +46,7 @@ const handlesubmit=async (e)=>{
 e.preventDefault()  //it will refresh again and again if we dont use this
 
 try{
-const response=await axios.post(`http://localhost:4000/api/salary/add`,employee,{
+const response=await axios.post(`https://employee-api-mu.vercel.app/api/salary/add`,employee,{
     headers:{
         "Authorization":`Bearer ${localStorage.getItem('token')}`
     }

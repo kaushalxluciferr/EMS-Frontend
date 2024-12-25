@@ -22,7 +22,7 @@ const handlesubmit=async (e)=>{
 e.preventDefault()
 try {
     const response = await axios.post(
-        `http://localhost:4000/api/leave/add`,leave,
+        `https://employee-api-mu.vercel.app/api/leave/add`,leave,
         {
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`,

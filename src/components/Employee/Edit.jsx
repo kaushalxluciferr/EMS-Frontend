@@ -30,7 +30,7 @@ useEffect(()=>{
     const GetEmployee = async () => {
         try {
             const response = await axios.get(
-                `http://localhost:4000/api/employee/${_id}`,
+                `https://employee-api-mu.vercel.app/api/employee/${_id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -63,7 +63,7 @@ const handlesubmit=async (e)=>{
 e.preventDefault()  //it will refresh again and again if we dont use this
 
 try{
-const response=await axios.put(`http://localhost:4000/api/employee/${_id}`,employee,{
+const response=await axios.put(`https://employee-api-mu.vercel.app/api/employee/${_id}`,employee,{
     headers:{
         "Authorization":`Bearer ${localStorage.getItem('token')}`
     }

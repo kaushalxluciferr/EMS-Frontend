@@ -23,7 +23,7 @@ export const DepartmentButtons=({_id,ondepdelete})=>{
             if(conform)
             {
             try{
-                const response=await axios.delete(`http://localhost:4000/api/department/${_id}`,{
+                const response=await axios.delete(`https://employee-api-mu.vercel.app/api/department/${_id}`,{
                   headers:{
                     "Authorization":`Bearer ${localStorage.getItem('token')}`
                   }
